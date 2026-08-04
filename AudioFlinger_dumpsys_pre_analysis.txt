@@ -35,5 +35,3 @@ F 					A			FillingStatus		I(Invalid), f(Filling), F(Filled), A(Active), ?(Defaul
 Underruns  			0
 Flushed   			0
 Latency				533.85 t
-
-
