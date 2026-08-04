@@ -1,0 +1,37 @@
+参数				实验值		含义				取值范围
+--------------------------------------------------------------------------------------
+(FastTrackIndex)	empty		FastTrack的ID		0 < x < FastMixerState::kMaxFast (默认最大值为8)
+Type     			empty		Track类型			S(Static Output), ' '(Normal Output), P(Patch), ?(Default)
+Id 					58			Track ID			int
+Active 				yes			是否处于活跃状态	yes, no
+Client 				5496		播放/录音APP的PID
+								(只要可以
+								创建AudioTrack/
+								AudioRecord)
+Session 			33
+Port Id 			38			用于在APM中			int
+								标识track的uniqueID
+S  					A			TrackState			T(Terminated), I(Idle), s1(Stopping_1(Fast/OffloadTrack)), s2(Stopping_2(Fast/OffloadTrack)), S(STOPPED), r(Resuming), A(Active), p(Pausing), P(Paused), F(Flushed), r1(Starting_1(RecordTrack)), r2(Starting_2(RecordTrack)), ?(Default)
+Flags   			0x000		SharedMemory State	定义在AudioTrackShared.h，0, CBLK_UNDERRUN(0x01), CBLK_FORCEREADY(0x02), CBLK_INVALID(0x04), CBLK_DISABLED(0x08), CBLK_LOOP_CYCLE(0x20), CBLK_LOOP_FINAL(0x40), CBLK_BUFFER_END(0x80), CBLK_OVERRUN(0x100), CBLK_INTERRUPT(0x200), CBLK_STREAM_END_DONE(0x400)
+Format 				00000001	AudioFormat			audio_format_t,定义在Audio-base.h
+Chn mask  			00000003	AudioChannel		AUDIO_CHANNEL_*值的组合,定义在Audio-base.h中
+SRate 				22050		AudioSampleRate
+ST 					3			AudioStreamType		audio_stream_type_t,定义在Audio-base.h中
+Usg 				1			AudioUsage			audio_attributes_t.usage,定义在Audio.h中; audio_usage_t又定义在Audio-base.h中
+CT  				0			AudioContentType	audio_attributes_t.content_type,定义在Audio.h中; audio_content_type_t又定义在Audio-base.h中
+G db  				0			总音量。左右声道	dB
+								音量之和的平均值。
+L dB  				0			左声道音量。		dB。0 - 0xFFFF
+R dB  				0			右声道音量。		dB。0 - 0xFFFF
+VS dB 				0			VolumeShaper音量	dB
+(VS_Active)  		empty		是否有活跃			A, ' '
+								的VolumeShanper
+Server 				0004CD49
+FrmCnt 				11264
+(BufferModified) 	empty
+FrmRdy 				9853
+F 					A			FillingStatus		I(Invalid), f(Filling), F(Filled), A(Active), ?(Default)
+								共享内存填充状态
+Underruns  			0
+Flushed   			0
+Latency				533.85 t
